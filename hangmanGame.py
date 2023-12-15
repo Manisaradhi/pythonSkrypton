@@ -16,7 +16,7 @@ def hangman_game():
     word = x[0]
     hint = x[1]
     a = 6
-    print("Number of attempts: 5\n")
+    print("Number of attempts: 6\n")
     print("----------------------------------\n")
     print("Guess the word")
     print(f"Hint:{hint}\n\n----------------------------------")
