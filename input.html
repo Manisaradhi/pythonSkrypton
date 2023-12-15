@@ -1,0 +1,151 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Input From User</title> 
+        <script>
+            function enter(){
+                let x = document.eform.eValue.value
+                let y = document.getElementById('a1');
+                y.style.display = 'block';
+                document.getElementById('uInput').innerText = x;
+                return false;
+            }
+            function closeDB(){
+                let y = document.getElementById('a1');
+                y.style.display = 'none';
+            }
+            function maximizeW(){
+                let y = document.getElementById('a1');
+                y.style.width = '100%';
+                y.style.height = '100%';
+                y.style.left = '0px';
+                y.style.top = '0px';
+            }
+            function minimizeDB(){
+                let y = document.getElementById('a1');
+                y.style.width = '400px';
+                y.style.height = '300px';
+                y.style.left = '460px';
+                y.style.top = '100px';
+            }
+        </script>
+        <style>
+            body{
+                background-color: gray;
+            }
+            input{
+                text-align: center;
+            }
+            .inp{
+                width: 300px;
+                height: 40px;
+            }
+            .dbox{
+                display: none;
+                width: 400px;
+                height: 300px;
+                background-color: white;
+                position: absolute;
+                left: 460px;
+                top: 100px;
+                border: 2px solid #000;
+                align-items: center;
+            }
+            .b1{
+                border: 0px;
+                font-size: 15px;
+                font-weight: bolder;
+                background-color: beige;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            .b2{
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                position: absolute;
+                top:10px;
+                right: 10px;
+            }
+            .b2:hover{
+                animation: anime 0.3s forwards;
+            }
+            @keyframes anime {
+                0%{
+                    transform: scale(1);
+                }
+                100%{
+                    transform: scale(1.3);
+                }
+            }
+            .b3{
+                width: 30px;
+                height: 30px;
+                border-radius: 99%;
+                position: absolute;
+                top:15px;
+                right: 50px;
+            }
+            .b3:hover{
+                animation: anime 0.3s forwards;
+            }
+            @keyframes anime {
+                0%{
+                    transform: scale(1);
+                }
+                100%{
+                    transform: scale(1.3);
+                }
+            }
+            .b4{
+                width: 25px;
+                height: 25px;
+                border-radius: 99%;
+                position: absolute;
+                top:17px;
+                right: 85px;
+            }
+            .b4:hover{
+                animation: anime 0.3s forwards;
+            }
+            @keyframes anime {
+                0%{
+                    transform: scale(1);
+                }
+                100%{
+                    transform: scale(1.3);
+                }
+            }
+            .b5{
+                width: 100px;
+                height: 50px;
+            }
+            .bd{
+                border: 1px solid #000;
+                margin: 20px;
+                background-color: beige;
+            }
+        </style>
+    </head>
+    <body>
+        <br><br>
+
+        <form name="eform" align="center"  onsubmit="return false;">
+            <input class="inp" type="text" placeholder="Enter value" name="eValue" onchange="enter()"/>
+            <div class="dbox" id="a1">
+                <br><br>
+                <div class="bd">
+                    <p>The text entered in the above input field is:</p>
+                    <p class="b1" type="text" id = "uInput">UserInput</p>
+                    <img class="b2" src="https://i.pinimg.com/474x/d2/b0/10/d2b01052124d637b98d00d0e595b8965.jpg" onclick="closeDB()"/>
+                    <img class="b3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTSZpWMtchy1knlcoQFbMp0X3_1lHpTIWMObDs7AsPXg&s" onclick="maximizeW()"/>
+                    <img class="b4" src="https://static.thenounproject.com/png/3403551-200.png" onclick="minimizeDB()"/>
+                    <br><br><br>
+                    <input class="b5" type="button" value="OK" onclick="closeDB()"/>
+                    <p>Click OK to exit!</p>
+                </div>
+                
+            </div>
+        </form>
+        
+    </body>
+</html>
